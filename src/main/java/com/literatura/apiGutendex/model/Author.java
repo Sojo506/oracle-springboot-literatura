@@ -16,7 +16,7 @@ public class Author {
     private Integer birthYear;
     private Integer deathYear;
 
-    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
     @JsonManagedReference
     private List<Book> books;
 
@@ -44,5 +44,15 @@ public class Author {
 
     public List<Book> getBooks() {
         return books;
+    }
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "name='" + name + '\'' +
+                ", birthYear=" + birthYear +
+                ", deathYear=" + deathYear +
+                ", books=" + books +
+                '}';
     }
 }
