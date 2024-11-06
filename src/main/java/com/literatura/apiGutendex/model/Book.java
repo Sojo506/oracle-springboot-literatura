@@ -21,44 +21,44 @@ public class Book {
     private String language;
     private Integer downloads;
 
+    public Book(BookData bookData) {
+        this.title = bookData.title();
+        bookData.authors().forEach(authorData -> {
+            Author author = new Author(authorData.name(), authorData.birth_year(), authorData.death_year());
+            this.author = author;
+        });
+        this.language = bookData.languages().isEmpty() ? "Unknown" : bookData.languages().get(0);
+        this.downloads = bookData.download_count();
+    }
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public Author getAuthor() {
         return author;
-    }
-
-    public void setAuthor(Author author) {
-        this.author = author;
     }
 
     public String getLanguage() {
         return language;
     }
 
-    public void setLanguage(String language) {
-        this.language = language;
-    }
-
     public Integer getDownloads() {
         return downloads;
     }
 
-    public void setDownloads(Integer downloads) {
-        this.downloads = downloads;
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", author=" + author +
+                ", language='" + language + '\'' +
+                ", downloads=" + downloads +
+                '}';
     }
 }
