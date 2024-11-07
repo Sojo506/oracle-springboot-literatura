@@ -20,6 +20,8 @@ public class Author {
     @JsonManagedReference
     private List<Book> books;
 
+    public Author(){}
+
     public Author(String name, Integer birthYear, Integer deathYear) {
         this.name = name;
         this.birthYear = birthYear;

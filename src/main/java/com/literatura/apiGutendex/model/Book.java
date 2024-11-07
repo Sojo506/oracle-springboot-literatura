@@ -21,6 +21,8 @@ public class Book {
     private String language;
     private Integer downloads;
 
+    public Book(){}
+
     public Book(BookData bookData) {
         this.title = bookData.title();
         bookData.authors().forEach(authorData -> {
