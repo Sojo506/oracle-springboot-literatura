@@ -216,7 +216,7 @@ public class Main {
     private void displayAuthors(List<Author> authors) {
         authors
                 .forEach(a -> {
-                    System.out.println("\n----- Book -----");
+                    System.out.println("\n----- Author -----");
                     System.out.println("Name: " + a.getName());
                     System.out.println("Birth day: " + a.getBirthYear());
                     System.out.println("Death year: " + a.getDeathYear());
