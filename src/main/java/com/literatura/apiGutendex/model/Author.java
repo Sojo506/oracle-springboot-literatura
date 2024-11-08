@@ -3,6 +3,7 @@ package com.literatura.apiGutendex.model;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -16,9 +17,9 @@ public class Author {
     private Integer birthYear;
     private Integer deathYear;
 
-    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonManagedReference
-    private List<Book> books;
+    private List<Book> books = new ArrayList<>();
 
     public Author(){}
 
@@ -44,6 +45,10 @@ public class Author {
         return deathYear;
     }
 
+    public void setBooks(List<Book> books) {
+        this.books = books;
+    }
+
     public List<Book> getBooks() {
         return books;
     }
@@ -54,7 +59,6 @@ public class Author {
                 "name='" + name + '\'' +
                 ", birthYear=" + birthYear +
                 ", deathYear=" + deathYear +
-                ", books=" + books +
                 '}';
     }
 }
