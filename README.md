@@ -4,12 +4,12 @@
 
 >===Select an option===<
 
-1 - Search book by title
-2 - List registered books
-3 - List registered authors
-4 - List authors alive in a given year
-5 - List books by language
-0 - Exit
+1 - (#Search book by title)
+2 - (#List registered books)
+3 - (#List registered authors)
+4 - (#List authors alive in a given year)
+5 - (#List books by language)
+0 - (#Exit)
 
 >===                  ===<
 
