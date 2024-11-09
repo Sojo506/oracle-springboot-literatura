@@ -166,10 +166,10 @@ public class Main {
 
         try {
             year = sc.nextInt();
-
         } catch (InputMismatchException e) {
-            System.out.println(e.getMessage());
+            System.out.println("Invalid input. Please enter a valid year.");
         }
+
         sc.nextLine();
 
         authors = authorRepository.findAuthorsByGivenYear(year);
@@ -191,11 +191,15 @@ public class Main {
                 """);
         String language = sc.nextLine().toLowerCase();
 
-        List<Book> booksByLang = bookRepository.findByLanguage(language);
-        if (booksByLang.isEmpty()) {
-            System.out.println("Books not found");
+        if (!Arrays.asList("es", "en", "fr", "pt").contains(language)) {
+            System.out.println("\nInvalid language. Please enter a valid language.");
         } else {
-            displayBooks(booksByLang);
+            List<Book> booksByLang = bookRepository.findByLanguage(language);
+            if (booksByLang.isEmpty()) {
+                System.out.println("Books not found");
+            } else {
+                displayBooks(booksByLang);
+            }
         }
     }
 
@@ -221,16 +225,18 @@ public class Main {
     }
 
     private void displayBooks(List<Book> books) {
-        books.stream()
-                .sorted(Comparator.comparing(Book::getTitle))
-                .forEach(b -> {
-                    System.out.println("\n----- Book -----");
-                    System.out.println("Title: " + b.getTitle());
-                    System.out.println("Author: " + b.getAuthor().getName());
-                    System.out.println("Language: " + b.getLanguage());
-                    System.out.println("Downloads: " + b.getDownloads());
-                    System.out.println("----- ---- -----");
-                });
+        if (!books.isEmpty()) {
+            books.stream()
+                    .sorted(Comparator.comparing(Book::getTitle))
+                    .forEach(b -> {
+                        System.out.println("\n----- Book -----");
+                        System.out.println("Title: " + b.getTitle());
+                        System.out.println("Author: " + b.getAuthor().getName());
+                        System.out.println("Language: " + b.getLanguage());
+                        System.out.println("Downloads: " + b.getDownloads());
+                        System.out.println("----- ---- -----");
+                    });
+        }
     }
 
     private boolean isValidTitle(String title) {
