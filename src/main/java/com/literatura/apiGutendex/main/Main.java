@@ -14,13 +14,6 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
-/* TO DO
- * 1 - buscar libro por titulo (api)
- * 2 - listar libros registrados (bd)
- * 3 - listar autores registrados (bd)
- * 4 - listar autores vivos en un determinado año (bd)
- * 5 - listar libros por idioma (bd)
- * */
 
 public class Main {
     private final Scanner sc = new Scanner(System.in);
@@ -241,7 +234,7 @@ public class Main {
     }
 
     private boolean isValidTitle(String title) {
-        return title.length() >= 3;
+        return title != null && title.trim().length() >= 3;
     }
 
     private String encodeForUrl(String title) {
