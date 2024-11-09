@@ -123,7 +123,7 @@ public class Main {
 ```
 
 ## Personas Contribuyentes
-- **Fabián Sojo **: [GitHub](https://github.com/Sojo506)
+- **Fabián Sojo**: [GitHub](https://github.com/Sojo506)
 
 ## Personas Desarrolladoras del Proyecto
-- **Fabián Sojo **: [GitHub](https://github.com/Sojo506)
+- **Fabián Sojo**: [GitHub](https://github.com/Sojo506)
