@@ -91,7 +91,7 @@ public class Main {
     ```
 
 ## Tecnologías Utilizadas
-- **Java 11**
+- **Java 17**
 - **Spring Boot**
 - **PostgreSQL**
 - **Maven**
