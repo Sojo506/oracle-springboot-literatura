@@ -13,7 +13,8 @@
 
 >===                  ===<
 
-![Java](https://img.shields.io/badge/Java-11-blue)
+
+![Java](https://img.shields.io/badge/Java-17-blue)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.5.4-brightgreen)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-13-blue)
 ![Maven](https://img.shields.io/badge/Maven-3.6.3-orange)
