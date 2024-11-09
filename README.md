@@ -2,16 +2,16 @@
 
 ## Menú de inicio
 
-#>===Select an option===<
+##>===Select an option===<
 
-1 - [Search book by title](#search-book-by-title)
-2 - [List registered books](#list-registered-books)
-3 - [List registered authors](#list-registered-authors)
-4 - [List authors alive in a given year](#list-authors-alive-in-a-given-year)
-5 - [List books by language](#list-books-by-language)
-0 - [Exit](#exit)
+1. [Search book by title](#search-book-by-title)
+2. [List registered books](#list-registered-books)
+3. [List registered authors](#list-registered-authors)
+4. [List authors alive in a given year](#list-authors-alive-in-a-given-year)
+5. [List books by language](#list-books-by-language)
+0. [Exit](#exit)
 
-#>===                  ===<
+##>===                  ===<
 
 
 ![Java](https://img.shields.io/badge/Java-17-blue)
